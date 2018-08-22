@@ -23,7 +23,6 @@ check_root
 
 ./check_ipcalc.sh &>/dev/null
 
-
 check_csv_net () {
 
   for vm in `cat $1`
@@ -88,7 +87,7 @@ rm -r ./netlist/
 vm.params () {
   		host=$(echo $1 | cut -d ";" -f1)
   		ip=$(echo $1 | cut -d ";" -f2)
-      ram=$(echo $1 | cut -d ";" -f3)
+ 		ram=$(echo $1 | cut -d ";" -f3)
   		netname=$(echo $1 | cut -d ";" -f4)
   		network=$(echo $1 | cut -d ";" -f5)
   		gw=$network
